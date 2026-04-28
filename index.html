@@ -1,0 +1,1117 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>MagWigs | פאות קאסטם איכותיות במחירים מפתיעים</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg-dark: #0a0806;
+  --bg-surface: #15120e;
+  --gold-primary: #d7b56d;
+  --gold-light: #f7e0a3;
+  --gold-dark: #9a7837;
+  --text-main: #fdfaf5;
+  --text-muted: #b8b0a1;
+  --border-glass: rgba(215, 181, 109, 0.15);
+  --bg-glass: rgba(255, 255, 255, 0.03);
+  --shadow-glow: 0 0 40px rgba(215, 181, 109, 0.08);
+  --transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+body {
+  font-family: "Heebo", system-ui, -apple-system, sans-serif;
+  color: var(--text-main);
+  background-color: var(--bg-dark);
+  background-image: 
+    radial-gradient(circle at 15% 50%, rgba(215, 181, 109, 0.05), transparent 40%),
+    radial-gradient(circle at 85% 10%, rgba(215, 181, 109, 0.08), transparent 40%);
+  background-attachment: fixed;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Typography */
+h1, h2, h3, h4 {
+  font-weight: 900;
+  line-height: 1.2;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #fff, var(--gold-primary), var(--gold-dark));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+/* Layout Utilities */
+.container {
+  width: min(1200px, 92%);
+  margin: 0 auto;
+}
+
+section {
+  padding: 100px 0;
+}
+
+.glass-panel {
+  background: var(--bg-glass);
+  border: 1px solid var(--border-glass);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-radius: 24px;
+}
+
+/* Animations */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+.delay-1 { transition-delay: 0.1s; }
+.delay-2 { transition-delay: 0.2s; }
+.delay-3 { transition-delay: 0.3s; }
+
+/* ====================
+   HEADER & NAV
+   ==================== */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 15px 0;
+  background: rgba(10, 8, 6, 0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-glass);
+  transition: var(--transition);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: var(--text-main);
+}
+
+.brand img {
+  height: 50px;
+  width: auto;
+  border-radius: 8px;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-text strong {
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+.brand-text span {
+  font-size: 12px;
+  color: var(--gold-primary);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+
+.nav-links a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 15px;
+  transition: var(--transition);
+}
+
+.nav-links a:hover {
+  color: var(--gold-light);
+}
+
+.btn-nav {
+  padding: 10px 24px;
+  border-radius: 100px;
+  background: var(--gold-primary);
+  color: var(--bg-dark) !important;
+  font-weight: 700 !important;
+}
+
+.btn-nav:hover {
+  background: var(--gold-light);
+  transform: translateY(-2px);
+}
+
+/* ====================
+   HERO SECTION
+   ==================== */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: 100px;
+  position: relative;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.hero-content h1 {
+  font-size: clamp(40px, 5vw, 65px);
+  margin-bottom: 24px;
+}
+
+.hero-content p {
+  font-size: 20px;
+  color: var(--text-muted);
+  margin-bottom: 40px;
+  max-width: 500px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 32px;
+  border-radius: 100px;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  transition: var(--transition);
+  border: none;
+  font-family: inherit;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--gold-light), var(--gold-primary));
+  color: var(--bg-dark);
+  box-shadow: 0 10px 30px rgba(215, 181, 109, 0.3);
+}
+
+.btn-primary:hover {
+  box-shadow: 0 15px 40px rgba(215, 181, 109, 0.4);
+  transform: translateY(-3px);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--text-main);
+  border: 1px solid var(--border-glass);
+}
+
+.btn-outline:hover {
+  background: var(--bg-glass);
+  border-color: var(--gold-primary);
+}
+
+.hero-visual {
+  position: relative;
+  height: 600px;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: var(--shadow-glow);
+}
+
+.hero-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.85;
+}
+
+.hero-visual::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, var(--bg-dark) 0%, transparent 60%);
+}
+
+.badge {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  background: rgba(20, 15, 10, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--gold-primary);
+  padding: 15px 25px;
+  border-radius: 16px;
+  z-index: 2;
+}
+
+.badge-title {
+  display: block;
+  color: var(--gold-light);
+  font-weight: 900;
+  font-size: 18px;
+}
+
+.badge-sub {
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
+/* ====================
+   FEATURES / WHY US
+   ==================== */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 60px;
+}
+
+.feature-card {
+  padding: 40px 30px;
+  text-align: right;
+  transition: var(--transition);
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  border-color: rgba(215, 181, 109, 0.4);
+}
+
+.feature-icon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, rgba(215,181,109,0.1), rgba(215,181,109,0.02));
+  border: 1px solid var(--border-glass);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  color: var(--gold-primary);
+}
+
+.feature-card h3 {
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+.feature-card p {
+  color: var(--text-muted);
+  font-size: 15px;
+}
+
+/* ====================
+   THE PROCESS
+   ==================== */
+.process-section {
+  background: linear-gradient(180deg, var(--bg-dark), var(--bg-surface));
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-header span {
+  color: var(--gold-primary);
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.section-header h2 {
+  font-size: clamp(32px, 4vw, 48px);
+  margin-top: 10px;
+}
+
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  position: relative;
+}
+
+.step {
+  position: relative;
+  padding: 30px;
+  background: var(--bg-dark);
+  border-radius: 24px;
+  border: 1px solid var(--border-glass);
+}
+
+.step-number {
+  font-size: 60px;
+  font-weight: 900;
+  color: rgba(215, 181, 109, 0.1);
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  line-height: 1;
+}
+
+.step h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.step p {
+  color: var(--text-muted);
+  font-size: 15px;
+  position: relative;
+  z-index: 1;
+}
+
+/* ====================
+   FAQ SECTION
+   ==================== */
+.faq-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--border-glass);
+  padding: 24px 0;
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-main);
+  transition: var(--transition);
+}
+
+.faq-question:hover {
+  color: var(--gold-light);
+}
+
+.faq-icon {
+  color: var(--gold-primary);
+  font-size: 24px;
+  transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(45deg);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  color: var(--text-muted);
+}
+
+.faq-answer-inner {
+  padding-top: 16px;
+  padding-bottom: 8px;
+  font-size: 15px;
+}
+
+/* ====================
+   FORM / CONTACT SECTION
+   ==================== */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.contact-info h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.contact-info p {
+  color: var(--text-muted);
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+
+.contact-method {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.contact-method-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--bg-glass);
+  border: 1px solid var(--border-glass);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold-primary);
+}
+
+.form-wrapper {
+  padding: 40px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.full-width {
+  grid-column: 1 / -1;
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  color: var(--gold-light);
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid var(--border-glass);
+  color: white;
+  padding: 16px;
+  border-radius: 16px;
+  font-family: inherit;
+  font-size: 15px;
+  transition: var(--transition);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--gold-primary);
+  background: rgba(215, 181, 109, 0.05);
+}
+
+.form-group textarea {
+  height: 120px;
+  resize: vertical;
+}
+
+.btn-submit {
+  width: 100%;
+  margin-top: 20px;
+}
+
+#form-message {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* ====================
+   FOOTER
+   ==================== */
+footer {
+  border-top: 1px solid var(--border-glass);
+  padding: 40px 0;
+  text-align: center;
+  background: var(--bg-dark);
+}
+
+footer p {
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+/* ====================
+   FLOATING WHATSAPP
+   ==================== */
+.floating-wa {
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  background: #25D366;
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3);
+  z-index: 90;
+  transition: var(--transition);
+}
+
+.floating-wa svg {
+  width: 32px;
+  height: 32px;
+  fill: currentColor;
+}
+
+.floating-wa:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 15px 25px rgba(37, 211, 102, 0.4);
+}
+
+/* ====================
+   THANKS PAGE STYLES
+   ==================== */
+#thanks-page {
+  display: none;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  position: fixed;
+  inset: 0;
+  background: var(--bg-dark);
+  z-index: 200;
+}
+
+.thanks-box {
+  max-width: 500px;
+  padding: 50px;
+  text-align: center;
+}
+
+.thanks-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: rgba(215, 181, 109, 0.1);
+  color: var(--gold-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  margin: 0 auto 30px;
+  border: 1px solid var(--gold-primary);
+}
+
+.thanks-box h1 {
+  font-size: 36px;
+  margin-bottom: 16px;
+}
+
+.thanks-box p {
+  color: var(--text-muted);
+  margin-bottom: 30px;
+  font-size: 18px;
+}
+
+/* ====================
+   RESPONSIVE DESIGN
+   ==================== */
+@media (max-width: 992px) {
+  .hero-grid,
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .hero-visual {
+    height: 400px;
+    order: -1;
+  }
+  
+  .hero-content {
+    text-align: center;
+  }
+  
+  .hero-content p {
+    margin: 0 auto 40px;
+  }
+  
+  .hero-actions {
+    justify-content: center;
+  }
+  
+  .nav-links {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: 70px 0;
+  }
+  
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .form-wrapper {
+    padding: 24px;
+  }
+  
+  .floating-wa {
+    bottom: 20px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+  }
+  
+  .floating-wa svg {
+    width: 26px;
+    height: 26px;
+  }
+}
+</style>
+</head>
+<body>
+
+<div id="main-content">
+  <!-- Header -->
+  <header id="header">
+    <div class="container nav-container">
+      <a href="#" class="brand">
+        <img src="logo.jpeg" alt="MagWigs" onerror="this.src='https://placehold.co/100x100/15120e/d7b56d?text=MW'">
+        <div class="brand-text">
+          <strong>MagWigs</strong>
+          <span>פאות איכות בהתאמה אישית</span>
+        </div>
+      </a>
+      
+      <div class="nav-links">
+        <a href="#about">הסוד שלנו</a>
+        <a href="#process">איך זה עובד</a>
+        <a href="#faq">שאלות נפוצות</a>
+      </div>
+      
+      <a href="#quote" class="btn btn-nav">לקבלת הצעת מחיר</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="container hero-grid">
+      <div class="hero-content reveal">
+        <h1>פאת קאסטם מושלמת <span class="gradient-text">במחיר שיפתיע אותך</span></h1>
+        <p>מראה טבעי, קו נקי ואלגנטי, ואיכות שיער ללא פשרות. אנחנו ב-MagWigs מאמינים שמגיע לך להיראות במיטבך וליהנות מפאת פרימיום, מבלי לשבור את התקציב.</p>
+        <div class="hero-actions">
+          <a href="#quote" class="btn btn-primary">קבלי הצעת מחיר אישית</a>
+          <a href="#about" class="btn btn-outline">גלי את הסוד שלנו</a>
+        </div>
+      </div>
+      
+      <div class="hero-visual reveal delay-1">
+        <!-- תמונת אווירה יוקרתית של כלי עיצוב / התאמה אישית -->
+        <img src="https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?auto=format&fit=crop&q=80&w=800" alt="עיצוב פאות והתאמה אישית">
+        <div class="badge">
+          <span class="badge-title">100% שיער איכותי</span>
+          <span class="badge-sub">מראה טבעי ומוקפד</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="about" class="container">
+    <div class="section-header reveal">
+      <span>למה דווקא אנחנו?</span>
+      <h2>איכות של פאת יוקרה, מחיר של יבואן</h2>
+    </div>
+    
+    <div class="features-grid">
+      <div class="feature-card glass-panel reveal">
+        <div class="feature-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+        </div>
+        <h3>מחירים חסרי תקדים</h3>
+        <p>המודל שלנו מאפשר לנו לחסוך פערי תיווך ולספק לך פאות ברמת גימור הגבוהה ביותר, במחירים שוברי שוק שאי אפשר למצוא בחנויות הרגילות.</p>
+      </div>
+      
+      <div class="feature-card glass-panel reveal delay-1">
+        <div class="feature-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path><path d="M12 16v-4"></path><path d="M12 8h.01"></path></svg>
+        </div>
+        <h3>שיער מובחר בלבד</h3>
+        <p>אנו מקפידים על שיער איכותי ורך, המעניק מראה טבעי, מלא תנועה וברק עדין. רשתות דקות (לייס או סקין טופ) המשתלבות בצורה מושלמת.</p>
+      </div>
+      
+      <div class="feature-card glass-panel reveal delay-2">
+        <div class="feature-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.66V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h5.34"></path><polygon points="18 2 22 6 12 16 8 16 8 12 18 2"></polygon></svg>
+        </div>
+        <h3>התאמה אישית (קאסטם)</h3>
+        <p>הפאה מיוצרת ומעוצבת במיוחד עבורך - מהמידה המדויקת, דרך צבע ושילוב גוונים עדין, ועד לגזירה המחמיאה ביותר למבנה הפנים שלך.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process Section -->
+  <section id="process" class="process-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span>הדרך לפאה שלך</span>
+        <h2>איך מקבלים הצעת מחיר?</h2>
+      </div>
+      
+      <div class="process-steps">
+        <div class="step reveal">
+          <div class="step-number">1</div>
+          <h3>מילוי פרטים באתר</h3>
+          <p>ספרי לנו איזה סגנון את מחפשת, מה האורך והצבע שאת אוהבת, כדי שנוכל להבין את הכיוון שלך.</p>
+        </div>
+        
+        <div class="step reveal delay-1">
+          <div class="step-number">2</div>
+          <h3>הצעת מחיר אישית</h3>
+          <p>נחזור אלייך (בוואטסאפ או בשיחה) עם הצעת מחיר מדויקת ומפתיעה לטובה שמותאמת לבקשות שלך.</p>
+        </div>
+        
+        <div class="step reveal delay-2">
+          <div class="step-number">3</div>
+          <h3>ייעוץ והתאמה</h3>
+          <p>מסכימים על המחיר? נקבע פגישה למדידת רשת, בחירת שיער ותכנון סופי של סגנון הפאה.</p>
+        </div>
+        
+        <div class="step reveal delay-3">
+          <div class="step-number">4</div>
+          <h3>מתחדשים</h3>
+          <p>אחרי תהליך הייצור המוקפד, ניפגש לגזירה ועיצוב סופי. תצאי עם פאה יפהפייה ומחמיאה.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section id="faq" class="container">
+    <div class="section-header reveal">
+      <span>כל מה שרצית לדעת</span>
+      <h2>שאלות נפוצות</h2>
+    </div>
+    
+    <div class="faq-container">
+      <div class="faq-item reveal">
+        <div class="faq-question">
+          איך ייתכן שהמחירים כל כך מפתיעים?
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            אנחנו עובדים ישירות מול היצרנים, ללא פערי תיווך, סלוני פאר יקרים או הוצאות שיווק מנופחות. את החיסכון העצום הזה אנחנו מעבירים ישירות אלייך, כך שאת משלמת על איכות השיער והעבודה נטו.
+          </div>
+        </div>
+      </div>
+      
+      <div class="faq-item reveal delay-1">
+        <div class="faq-question">
+          האם הפאות מתאימות לחבישה יומיומית?
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            בהחלט. אנחנו משתמשים ברשתות קלות ונושמות ובשיער איכותי ועמיד. הפאות מותאמות לנוחות מקסימלית לנשים שחובשות פאה לאורך כל היום, לעבודה, לבית ולאירועים.
+          </div>
+        </div>
+      </div>
+      
+      <div class="faq-item reveal delay-2">
+        <div class="faq-question">
+          מה ההבדל בין לייס לסקין טופ (לייס מקופל)?
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            פאת לייס מעניקה קו שיער דק ובלתי נראה בחזית למראה טבעי במיוחד, אך דורשת עדינות בתחזוקה. פאת סקין טופ מדמה את קרקפת הראש בצורה אטומה, מסתירה את הקשרים ונחשבת עמידה וחזקה יותר לאורך זמן. אנחנו מתאימים את הסוג לפי ההעדפה והתקציב שלך.
+          </div>
+        </div>
+      </div>
+      
+      <div class="faq-item reveal delay-3">
+        <div class="faq-question">
+          האם אני חייבת לדעת בדיוק מה אני רוצה לפני שאני פונה?
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            ממש לא. הטופס נועד לתת לנו כיוון כללי כדי שנוכל לתת הערכת מחיר. במהלך השיחה איתנו נוכל לייעץ, לכוון ולעזור לך לבחור את הסגנון שהכי יחמיא לך ולצרכים שלך.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact / Form Section -->
+  <section id="quote" class="process-section">
+    <div class="container contact-grid">
+      <div class="contact-info reveal">
+        <h2>בואי נדבר על הפאה הבאה שלך</h2>
+        <p>מלאי את הפרטים הבסיסיים (מה שאת יודעת), ונחזור אלייך בהקדם עם הצעת מחיר שתעשה לך סדר ותשאיר אותך עם חיוך. ללא שום התחייבות.</p>
+        
+        <div class="contact-method">
+          <div class="contact-method-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          </div>
+          <div>
+            <strong style="display:block; color:var(--gold-light)">שיחה / הודעת וואטסאפ</strong>
+            <span dir="ltr">058-666-0460</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="form-wrapper glass-panel reveal delay-1">
+        <form id="orderForm" action="https://formsubmit.co/ajax/margalite95@gmail.com" method="POST">
+          <input type="hidden" name="_subject" value="בקשה להצעת מחיר - MagWigs">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">
+
+          <div class="form-grid">
+            <div class="form-group full-width">
+              <h3 style="margin-bottom: 15px; font-size: 18px; color: var(--gold-primary);">פרטים אישיים</h3>
+            </div>
+            
+            <div class="form-group">
+              <label>שם מלא *</label>
+              <input type="text" name="name" required placeholder="הכניסי שם מלא">
+            </div>
+
+            <div class="form-group">
+              <label>טלפון חזרה *</label>
+              <input type="tel" name="phone" required placeholder="מספר נייד">
+            </div>
+
+            <div class="form-group full-width" style="margin-top: 15px;">
+              <h3 style="margin-bottom: 15px; font-size: 18px; color: var(--gold-primary);">מה הכיוון שלך? (לא חובה)</h3>
+            </div>
+
+            <div class="form-group">
+              <label>סגנון רשת</label>
+              <select name="wigType">
+                <option value="" disabled selected>בחרי סגנון</option>
+                <option>לייס פזורה</option>
+                <option>סקין טופ (לייס מקופל)</option>
+                <option>פאת סרט / בנד</option>
+                <option>לא בטוחה, אשמח לייעוץ</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>אורך משוער</label>
+              <select name="length">
+                <option value="" disabled selected>בחרי אורך</option>
+                <option>קארה / קצר</option>
+                <option>אורך כתפיים</option>
+                <option>אמצע גב</option>
+                <option>ארוך מאוד</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>עיצוב מועדף</label>
+              <select name="hairStyle">
+                <option value="" disabled selected>איך היית רוצה את השיער?</option>
+                <option>חלק וקלאסי</option>
+                <option>תנועה קלה / גלי עדין</option>
+                <option>מתולתל</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>העדפת צבע (בגדול)</label>
+              <input type="text" name="color" placeholder="למשל: חום כהה, שטני, גווני שמש...">
+            </div>
+
+            <div class="form-group full-width">
+              <label>הערות / בקשות מיוחדות</label>
+              <textarea name="notes" placeholder="כל דבר שחשוב לך שנדע לפני שנכין לך הצעת מחיר..."></textarea>
+            </div>
+          </div>
+
+          <button class="btn btn-primary btn-submit" type="submit">שלחי לקבלת הצעת מחיר</button>
+          <div id="form-message"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <a href="#" class="brand" style="justify-content: center; margin-bottom: 20px;">
+        <strong style="font-size: 24px;">MagWigs</strong>
+      </a>
+      <p>&copy; <span id="year"></span> MagWigs. פאות קאסטם איכותיות במחירים מפתיעים.</p>
+    </div>
+  </footer>
+</div>
+
+<!-- Floating WhatsApp Button -->
+<a href="https://wa.me/972586660460" target="_blank" class="floating-wa" aria-label="שלחי לנו הודעה בוואטסאפ">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.82 9.82 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+</a>
+
+<!-- Thanks Page -->
+<div id="thanks-page">
+  <div class="thanks-box glass-panel">
+    <div class="thanks-icon">✓</div>
+    <h1>תודה שפנית אלינו!</h1>
+    <p>קיבלנו את הפרטים שלך בהצלחה. אנחנו נעבור עליהם, ונחזור אלייך בהקדם (בשיחה או בוואטסאפ) עם הצעת מחיר מסודרת ומפתיעה לטובה.</p>
+    <div style="display: flex; gap: 16px; justify-content: center; margin-top: 30px;">
+      <button class="btn btn-primary" onclick="closeThanksPage()">חזרה לאתר</button>
+      <a class="btn btn-outline" href="https://wa.me/972586660460" target="_blank">מעבר לשיחה בוואטסאפ</a>
+    </div>
+  </div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  // Set current year in footer
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  // Sticky Header Effect
+  const header = document.getElementById("header");
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 50) {
+      header.style.background = "rgba(10, 8, 6, 0.98)";
+      header.style.boxShadow = "0 4px 20px rgba(0,0,0,0.5)";
+    } else {
+      header.style.background = "rgba(10, 8, 6, 0.85)";
+      header.style.boxShadow = "none";
+    }
+  });
+
+  // Scroll Reveal Animations
+  const revealElements = document.querySelectorAll(".reveal");
+  const revealOptions = {
+    threshold: 0.15,
+    rootMargin: "0px 0px -50px 0px"
+  };
+
+  const revealOnScroll = new IntersectionObserver(function(entries, observer) {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add("active");
+      observer.unobserve(entry.target);
+    });
+  }, revealOptions);
+
+  revealElements.forEach(el => revealOnScroll.observe(el));
+
+  // FAQ Accordion Logic
+  const faqItems = document.querySelectorAll('.faq-item');
+  faqItems.forEach(item => {
+    const question = item.querySelector('.faq-question');
+    const answer = item.querySelector('.faq-answer');
+    
+    question.addEventListener('click', () => {
+      const isActive = item.classList.contains('active');
+      
+      faqItems.forEach(otherItem => {
+        otherItem.classList.remove('active');
+        otherItem.querySelector('.faq-answer').style.maxHeight = null;
+      });
+      
+      if (!isActive) {
+        item.classList.add('active');
+        answer.style.maxHeight = answer.scrollHeight + "px";
+      }
+    });
+  });
+
+  // Form Submit via AJAX
+  const form = document.getElementById("orderForm");
+  const mainContent = document.getElementById("main-content");
+  const thanksPage = document.getElementById("thanks-page");
+  const submitBtn = form.querySelector(".btn-submit");
+  const messageDiv = document.getElementById("form-message");
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    
+    const originalText = submitBtn.innerText;
+    submitBtn.innerText = "שולח נתונים...";
+    submitBtn.disabled = true;
+    submitBtn.style.opacity = "0.7";
+    messageDiv.innerText = "";
+    
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch(form.action, {
+        method: "POST",
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (response.ok) {
+        mainContent.style.filter = "blur(10px)";
+        thanksPage.style.display = "flex";
+        form.reset();
+      } else {
+        showError("אירעה שגיאה בשליחת הטופס. אנא נסו שוב או פנו אלינו בוואטסאפ.");
+      }
+    } catch (error) {
+      showError("שגיאת רשת. בדקו את החיבור ונסו שוב.");
+    } finally {
+      submitBtn.innerText = originalText;
+      submitBtn.disabled = false;
+      submitBtn.style.opacity = "1";
+    }
+  });
+
+  function showError(msg) {
+    messageDiv.style.color = "#ff6b6b";
+    messageDiv.innerText = msg;
+    setTimeout(() => { messageDiv.innerText = ""; }, 5000);
+  }
+
+  // Close Thanks Page globally
+  window.closeThanksPage = () => {
+    thanksPage.style.display = "none";
+    mainContent.style.filter = "none";
+    window.scrollTo(0, 0);
+  };
+});
+</script>
+
+</body>
+</html>
